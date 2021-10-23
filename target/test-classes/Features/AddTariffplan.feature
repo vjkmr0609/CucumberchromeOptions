@@ -10,7 +10,7 @@ Feature: Add Tariff Plan
      |10000|200|100|200|12|20|3|
     And click Submit button
     Then navigate to congratulation page
-   @1dl 
+   @1dl @reg
   Scenario: add tariff plan using 1 map concept
     When user enter all Fields using one dim map concept
      |rental|10000|

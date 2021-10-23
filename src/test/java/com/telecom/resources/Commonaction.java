@@ -19,18 +19,18 @@ public class Commonaction {
 	public void launch( String url) {
 		WebDriverManager.chromedriver().setup();
 		
-		DesiredCapabilities chromeCapabilities = DesiredCapabilities.chrome();
-		chromeCapabilities.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.DISMISS);
-		
+//		DesiredCapabilities chromeCapabilities = DesiredCapabilities.chrome();
+//		chromeCapabilities.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.DISMISS);
+	
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("start-maximized");
 		options.setExperimentalOption("excludeSwitches",
 		 Arrays.asList("disable-popup-blocking"));
 		options.addArguments("headless");
 		
-		chromeCapabilities.setCapability(ChromeOptions.CAPABILITY, options);
+		//chromeCapabilities.setCapability(ChromeOptions.CAPABILITY, options);
 		
-	    driver = new ChromeDriver(chromeCapabilities);
+	    driver = new ChromeDriver(options);
 	    driver.get(url);
 	   // driver.manage().window().maximize();
 	    driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
